@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".ui.addfragment.AddEventFragment">
+
+
+
+    <EditText
+        android:id="@+id/et_event_title"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:hint="Event Title"
+        android:inputType="textLongMessage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/et_event_details"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="32dp"
+        android:hint="Event Details"
+        android:inputType="textMultiLine|text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_event_title" />
+
+    <Button
+        android:id="@+id/clear_event_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/save_event_button"
+        app:layout_constraintTop_toBottomOf="@+id/et_event_details" />
+
+    <Button
+        android:id="@+id/save_event_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/clear_event_button"
+        app:layout_constraintStart_toEndOf="@+id/et_event_details"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_event_details" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.accoladecreative.mydailydiary.welcomeFragments.WelcomeFragment"
+        android:label="WelcomeFragment" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_middleFragment"
+            app:destination="@id/middleFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/welcomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/middleFragment"
+        android:name="com.accoladecreative.mydailydiary.welcomeFragments.MiddleFragment"
+        android:label="fragment_middle"
+        tools:layout="@layout/fragment_middle" >
+        <action
+            android:id="@+id/action_middleFragment_to_thirdFragment"
+            app:destination="@id/thirdFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_middleFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdFragment"
+        android:name="com.accoladecreative.mydailydiary.welcomeFragments.ThirdFragment"
+        android:label="fragment_third"
+        tools:layout="@layout/fragment_third" >
+        <action
+            android:id="@+id/action_thirdFragment_to_middleFragment"
+            app:destination="@id/middleFragment" />
+        <action
+            android:id="@+id/action_thirdFragment_to_quizFragment"
+            app:destination="@id/quizFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="com.accoladecreative.mydailydiary.welcomeFragments.QuizFragment"
+        android:label="QuizFragment" >
+        <action
+            android:id="@+id/action_quizFragment_to_failFragment"
+            app:destination="@id/failFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:popUpTo="@id/middleFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_quizFragment_to_successFragment"
+            app:destination="@id/successFragment" />
+        <action
+            android:id="@+id/action_quizFragment_to_successFragment2"
+            app:destination="@id/successFragment"
+            app:enterAnim="@anim/success"
+            app:exitAnim="@anim/success2"
+            app:popUpTo="@id/welcomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/failFragment"
+        android:name="com.accoladecreative.mydailydiary.welcomeFragments.FailFragment"
+        android:label="fragment_fail"
+        tools:layout="@layout/fragment_fail" >
+        <action
+            android:id="@+id/action_failFragment_to_quizFragment"
+            app:destination="@id/quizFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/successFragment"
+        android:name="com.accoladecreative.mydailydiary.welcomeFragments.SuccessFragment"
+        android:label="fragment_success"
+        tools:layout="@layout/fragment_success" >
+        <action
+            android:id="@+id/action_successFragment_to_quizFragment"
+            app:destination="@id/quizFragment" />
+    </fragment>
+</navigation>
