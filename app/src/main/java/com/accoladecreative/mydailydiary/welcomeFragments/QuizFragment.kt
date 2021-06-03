@@ -22,8 +22,8 @@ class QuizFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-
-        val binding: FragmentQuizBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_quiz, container, false)
+        val binding = FragmentQuizBinding.inflate(inflater)
+        //val binding: FragmentQuizBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_quiz, container, false)
 
         binding.submitQuiz.setOnClickListener {
             if (binding.quiz1.text.toString() == "Apple" && binding.quiz2.text.toString() == "Mango") {

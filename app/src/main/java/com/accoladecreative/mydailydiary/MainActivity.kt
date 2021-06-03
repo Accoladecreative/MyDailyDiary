@@ -14,7 +14,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class MainActivity : AppCompatActivity() {
-    val TAGGED = "MainActivity"
+    private val TAGGED = "MainActivity"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,7 +23,6 @@ class MainActivity : AppCompatActivity() {
         title = "Events Diary"
 
         findViewById<FloatingActionButton>(R.id.fab).setOnClickListener { view ->
-
             startActivity(Intent(this,AddEditNote::class.java))
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
