@@ -1,17 +1,11 @@
-package com.accoladecreative.mydailydiary
-
+package com.accoladecreative.mydailydiary.welcomeFragments
 import com.accoladecreative.mydailydiary.welcomeFragments.QuizFragment.quiz
 import junit.framework.TestCase
 import org.junit.Test
 
-import org.junit.Assert.*
+class QuizFragmentTest : TestCase() {
 
-/**
- * Example local unit test, which will execute on the development machine (host).
- *
- * See [testing documentation](http://d.android.com/tools/testing).
- */
-class ExampleUnitTest {
+    //fun testOnCreateView() {}
     @Test
     fun test_Quiz(){
         val expected = true
